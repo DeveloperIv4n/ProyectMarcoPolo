@@ -12,80 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <style>
-        body{
-    background-image: url(../img/image.gif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 100%;
-}
-html {
-    height: 100%;
-}
-#ChatPersona{
-    background-color: wheat;
-    margin: 20px;
-    width: 55%;
-    float: right;
-    border-radius: 20px 0px 20px 20px;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#ChatBot{
-    background-color: rgb(126, 83, 5);
-    margin: 20px;
-    width: 55%;
-    float: left;
-    padding: 10px;
-    border-radius: 0px 20px 20px 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#Chat{
-    width: 80%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-#Form{
-    width: 100%;
-    position: relative;
-    bottom: 0px;
-}
-#imagen{
-    position: static;
-}
-
-    </style>
-<script>
-    let mensaje = document.querySelector("#persona")
-let chat = document.querySelector("#Chat")
-let BotonEnviar = document.querySelector("#enviar")
-let formulario = document.querySelector("#Form")
-
-BotonEnviar.addEventListener("click", (e) => {
-    chat.innerHTML += `<label id="ChatPersona">${mensaje.value}</label>`;
-    const input = mensaje.value;
-    formulario.reset();
-
-    const dict_values = { input }; //Pass the javascript variables to a dictionary.
-    const s = JSON.stringify(dict_values);
-    // Stringify converts a JavaScript object or value to a JSON string
-    console.log(s); // Prints the variables to console window, which are in the JSON format
-    window.alert(s);
-    $.ajax({
-        url: "/test",
-        method: "POST",
-        contentType: "application/json",
-        data: JSON.stringify(s)
-    });
-
-}
-)
-</script>
-
-
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -102,6 +29,7 @@ BotonEnviar.addEventListener("click", (e) => {
             </form>
         </div>
     </div>
+    <script src="../js/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </body>
 
