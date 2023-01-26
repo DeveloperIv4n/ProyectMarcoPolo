@@ -22,8 +22,8 @@
   </head>
 
   <body>
-    <div class="card">
-      <div class="card-header msg_head">
+    <div class="card" id="card">
+      <div class="card-header msg_head" id="card-header">
         <div class="d-flex bd-highlight">
           <div class="img_cont">
             <img
@@ -32,16 +32,16 @@
             />
             <span class="online_icon"></span>
           </div>
-          <div class="user_info">
+          <div class="user_info" id="user_info">
             <span>Marco Polo IA</span>
             <p>1767 Respuestas</p>
           </div>
           <div class="llamada1">
-            <i class="fa fa-phone llamada2" aria-hidden="true"></i>
+            <i class="fa fa-phone llamada2" id="llamada2" aria-hidden="true"></i>
           </div>
           <div class="cambiarTono">
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" id="theme" />
               <span class="slider"></span>
               <span class="on">ON</span>
               <span class="off">OFF</span>
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="card-footer">
+      <div class="card-footer" id="card-footer">
         <div class="borrar1">
           <i class="fa fa-trash borrar2" id="borrar2" aria-hidden="true"></i>
         </div>
