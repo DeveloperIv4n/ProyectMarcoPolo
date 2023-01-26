@@ -48,7 +48,7 @@ html {
   margin-left: 30%;
   width: 70%;
   height: 90%;
-  padding-top: 16px;
+  padding-top: 18px;
   text-align: center;
   font-size: 30px;
   border-radius: 74px !important;
@@ -72,7 +72,7 @@ html {
 .card-footer {
   display: flex;
   flex-direction: row;
-  margin: 20px;
+  margin: 10px;
   border-radius: 74px !important;
   background: #e0e0e0;
   box-shadow: -5px -5px 12px #9b9b9b, 5px 5px 12px #ffffff;
@@ -88,7 +88,7 @@ html {
   margin-left: 10px;
   width: 60%;
   height: 60%;
-  padding-top: 21px;
+  padding-top: 1px;
   text-align: center;
   font-size: 30px;
   border-radius: 74px !important;
@@ -116,7 +116,7 @@ html {
   margin-left: 20px;
   width: 60%;
   height: 60%;
-  padding-top: 21px;
+  padding-top: 15px;
   padding-right: 7px;
   text-align: center;
   font-size: 30px;
@@ -145,7 +145,7 @@ html {
   margin-left: 25px;
   width: 60%;
   height: 60%;
-  padding-top: 16px;
+  padding-top: 10px;
   text-align: center;
   font-size: 37px;
   border-radius: 74px !important;
@@ -179,8 +179,9 @@ html {
 .mensaje2 {
   -webkit-tap-highlight-color: transparent;
   width: 100%;
-  min-height: 4rem;
-  padding: 1rem 1.5rem;
+  min-height: 3rem;
+  padding-left: 20px;
+  padding-top:10px;
   font-size: 1rem;
   line-height: 2rem;
   font-weight: 300;
@@ -188,7 +189,7 @@ html {
   border: none;
   border-radius: 34px;
   outline: none;
-  box-shadow: -5px -5px 8px #a1a1a1, 5px 5px 8px #ffffff;
+  box-shadow: -1px -1px 3px #a1a1a1, 2px 2px 6px #ffffff;
   resize: vertical;
   transition: ease 0.2s;
   cursor: pointer;
@@ -197,7 +198,10 @@ html {
 .mensaje2:hover {
   min-height: 8rem;
   border-radius: 34px;
-  box-shadow: inset -5px -5px 8px #a1a1a1, inset 5px 5px 8px #ffffff;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+    inset -2px -2px 4px rgba(255, 255, 255, .5),
+    inset 2px 2px 2px rgba(255, 255, 255, .075),
+    inset 2px 2px 4px rgba(0, 0, 0, .15);
 }
 
 /* Chrome/Opera/Safari */
@@ -321,7 +325,7 @@ html {
   border-radius: 10px;
   text-align: center;
   padding-top:5px ;
-  background: #efefef;
+  background: #e0e0e0;
   box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
     inset -2px -2px 4px rgba(255, 255, 255, 0.5),
     inset 2px 2px 2px rgba(255, 255, 255, 0.075),
@@ -378,7 +382,7 @@ html {
 }
 .card-body{
     margin: 10px;
-    background-color: #efefef;
+    background: #e0e0e0;
     border-radius: 50px;
 }
 .msg_cotainer {
@@ -388,7 +392,7 @@ html {
   padding: 10px;
   position: relative;
   border-radius: 10px;
-  background: #ececec;
+  background: #e0e0e0;
   box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
     inset -2px -2px 4px rgba(255, 255, 255, 0.5),
     inset 2px 2px 2px rgba(255, 255, 255, 0.075),
@@ -404,7 +408,7 @@ html {
   padding: 10px;
   position: relative;
   border-radius: 10px;
-  background: #efefef;
+  background: #e0e0e0;
   box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
     inset -2px -2px 4px rgba(255, 255, 255, 0.5),
     inset 2px 2px 2px rgba(255, 255, 255, 0.075),
@@ -418,7 +422,7 @@ html {
   color: rgb(0, 0, 0);
   font-size: 10px;
   border-radius: 1px;
-  background: #efefef;
+  background: #e0e0e0;
   padding: 4px;
   box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
     inset -2px -2px 4px rgba(255, 255, 255, 0.5),
@@ -433,7 +437,7 @@ html {
   color: rgba(0, 0, 0);
   font-size: 10px;
   border-radius: 1px;
-  background: #efefef;
+  background: #e0e0e0;
   padding: 3px;
   box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
     inset -2px -2px 4px rgba(255, 255, 255, 0.5),
