@@ -1,135 +1,525 @@
-<!DOCTYPE html>
-<html>
+body,
+html {
+	background-image: url("https://thumbs.gfycat.com/HomelyBewitchedItaliangreyhound-size_restricted.gif");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 100%;
+}
 
-<head>
-	<title>Chat</title>
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<!-- Font awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-	<!-- CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+.chat {
+	margin-top: auto;
+	margin-bottom: auto;
+}
 
-	<link rel="stylesheet" type="text/css" href="index.css">
-</head>
+.card {
+	backdrop-filter: blur(12px);
+	margin: 2%;
+	height: 100%;
+	width: 95%;
+	border-radius: 74px;
+	background: #d1cfcf9a;
+	box-shadow: -5px -5px 12px #9b9b9b,
+		5px 5px 12px #ffffff;
+}
 
-<body>
-	<div class="card">
-		<div class="card-header msg_head">
-			<div class="d-flex bd-highlight">
-				<div class="img_cont">
-					<img src="https://media1.giphy.com/avatars/lonelyonecity/J4AsVnoMVCeo.GIF"
-						class="rounded-circle user_img">
-						<span class="online_icon"></span>
-				</div>
-				<div class="user_info">
-					<span>Marco Polo IA</span>
-					<p>1767 Respuestas</p>
-				</div>
-				<div class="llamada1">
-					<i class="fa fa-phone llamada2" aria-hidden="true"></i>
-				</div>
-				<div class="cambiarTono">
-					
-				</div>
-			</div>
-		</div>
-		<div class="card-body msg_card_body">
-			<div class="d-flex justify-content-start mb-4">
-				<div class="img_cont_msg">
-					<img src="https://media1.giphy.com/avatars/lonelyonecity/J4AsVnoMVCeo.GIF"
-						class="rounded-circle user_img_msg">
-				</div>
-				<div class="msg_cotainer">
-					Hi, how are you samim?
-					<span class="msg_time">8:40 AM, Today</span>
-				</div>
-			</div>
-			<div class="d-flex justify-content-end mb-4">
-				<div class="msg_cotainer_send">
-					Hi Khalid i am good tnx how about you?
-					<span class="msg_time_send">8:55 AM, Today</span>
-				</div>
-				<div class="img_cont_msg">
-					<img src="https://avatars.hsoubcdn.com/ed57f9e6329993084a436b89498b6088?s=256"
-						class="rounded-circle user_img_msg">
-				</div>
-			</div>
-			<div class="d-flex justify-content-start mb-4">
-				<div class="img_cont_msg">
-					<img src="https://media1.giphy.com/avatars/lonelyonecity/J4AsVnoMVCeo.GIF"
-						class="rounded-circle user_img_msg">
-				</div>
-				<div class="msg_cotainer">
-					I am good too, thank you for your chat template
-					<span class="msg_time">9:00 AM, Today</span>
-				</div>
-			</div>
-			<div class="d-flex justify-content-end mb-4">
-				<div class="msg_cotainer_send">
-					You are welcome
-					<span class="msg_time_send">9:05 AM, Today</span>
-				</div>
-				<div class="img_cont_msg">
-					<img src="https://avatars.hsoubcdn.com/ed57f9e6329993084a436b89498b6088?s=256"
-						class="rounded-circle user_img_msg">
-				</div>
-			</div>
-			<div class="d-flex justify-content-start mb-4">
-				<div class="img_cont_msg">
-					<img src="https://media1.giphy.com/avatars/lonelyonecity/J4AsVnoMVCeo.GIF"
-						class="rounded-circle user_img_msg">
-				</div>
-				<div class="msg_cotainer">
-					I am looking for your next templates
-					<span class="msg_time">9:07 AM, Today</span>
-				</div>
-			</div>
-			<div class="d-flex justify-content-end mb-4">
-				<div class="msg_cotainer_send">
-					Ok, thank you have a good day
-					<span class="msg_time_send">9:10 AM, Today</span>
-				</div>
-				<div class="img_cont_msg">
-					<img src="https://avatars.hsoubcdn.com/ed57f9e6329993084a436b89498b6088?s=256"
-						class="rounded-circle user_img_msg">
-				</div>
-			</div>
-			<div class="d-flex justify-content-start mb-4">
-				<div class="img_cont_msg">
-					<img src="https://media1.giphy.com/avatars/lonelyonecity/J4AsVnoMVCeo.GIF"
-						class="rounded-circle user_img_msg">
-				</div>
-				<div class="msg_cotainer">
-					Bye, see you
-					<span class="msg_time">9:12 AM, Today</span>
-				</div>
-			</div>
-		</div>
-		<div class="card-footer">
+.contacts_body {
+	padding: 0.75rem 0 !important;
+	overflow-y: auto;
+	white-space: nowrap;
+}
 
-			<div class="borrar1">
-				<i class="fa fa-trash borrar2" aria-hidden="true"></i>
-			</div>
+.msg_card_body {
+	overflow-y: auto;
+}
 
-			<div class="camara1">
-				<i class="fa fa-camera camara2" aria-hidden="true"></i>
-			</div>
-			
-			
-			<div class="mensaje1">
-				<textarea class="mensaje2" placeholder="Que quieres saber?"></textarea>
-			</div>
-			<div class="enviar1">
-				<i class="fa fa-paper-plane enviar2"aria-hidden="true"></i>
-			</div>
-		</div>
+.card-header {
+	margin: 20px;
+	border-radius: 74px !important;
+	background: #e0e0e0;
+	box-shadow: -5px -5px 12px #9b9b9b,
+		5px 5px 12px #ffffff;
+}
+
+.llamada1 {
+	left: 10px;
+	width: 10%;
+}
+
+.llamada2 {
+	margin-top: 5px;
+	margin-left: 30%;
+	width: 70%;
+	height: 90%;
+	padding-top: 16px;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 74px !important;
+	background: #e0e0e0;
+	box-shadow:  -1px -1px 3px #a1a1a1,
+	2px 2px 6px #ffffff;
+	color: #00ffff;
+	text-shadow: 0 0 1px #00fff1, 0 0 3px #00fff1;
+
+}
+
+.llamada2:active {
+	text-shadow: 0 0 5px #000000, 0 0 20px #00fff1;
+	box-shadow: -1px -1px 3px #a1a1a1,
+    2px 2px 6px #ffffff,
+    inset -2px -2px 10px #a1a1a1,
+    inset 2px 2px 10px #ffffff;
+}
+
+.llamada1 {
+	left: 10px;
+	width: 10%;
+}
+
+.llamada2 {
+	margin-top: 5px;
+	margin-left: 30%;
+	width: 70%;
+	height: 90%;
+	padding-top: 18px;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 74px !important;
+	background: #e0e0e0;
+	box-shadow:  -1px -1px 3px #a1a1a1,
+	2px 2px 6px #ffffff;
+	color: #00ffff;
+	text-shadow: 0 0 1px #00fff1, 0 0 3px #00fff1;
+
+}
+
+.llamada2:active {
+	text-shadow: 0 0 5px #000000, 0 0 20px #00fff1;
+	box-shadow: -1px -1px 3px #a1a1a1,
+    2px 2px 6px #ffffff,
+    inset -2px -2px 10px #a1a1a1,
+    inset 2px 2px 10px #ffffff;
+}
+
+.card-footer {
+	display: flex;
+	flex-direction: row;
+	margin: 20px;
+	border-radius: 74px !important;
+	background: #e0e0e0;
+	box-shadow: -5px -5px 12px #9b9b9b,
+		5px 5px 12px #ffffff;
+}
+
+.camara1 {
+	left: 10px;
+	width: 10%;
+}
+
+.camara2 {
+	margin-top: 20px;
+	margin-left: 10px;
+	width: 60%;
+	height: 60%;
+	padding-top: 21px;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 74px !important;
+	background: #e0e0e0;
+	box-shadow:  -1px -1px 3px #a1a1a1,
+	2px 2px 6px #ffffff;
+	color: #00ffff;
+	text-shadow: 0 0 1px #00fff1, 0 0 3px #00fff1;
+
+}
+
+.camara2:active {
+	text-shadow: 0 0 5px #000000, 0 0 20px #00fff1;
+	box-shadow: -1px -1px 3px #a1a1a1,
+    2px 2px 6px #ffffff,
+    inset -2px -2px 10px #a1a1a1,
+    inset 2px 2px 10px #ffffff;
+}
+.enviar1{
+	left: 10px;
+	width: 10%;
+}
+
+.enviar2 {
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 60%;
+	height: 60%;
+	padding-top: 21px;
+	padding-right:7px ;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 74px !important;
+	background: #e0e0e0;
+	box-shadow:  -1px -1px 3px #a1a1a1,
+	2px 2px 6px #ffffff;
+	color: #00ffff;
+	text-shadow: 0 0 1px #00fff1, 0 0 3px #00fff1;
+
+}
+
+.enviar2:active {
+	text-shadow: 0 0 5px #000000, 0 0 20px #00fff1;
+	box-shadow: -1px -1px 3px #a1a1a1,
+    2px 2px 6px #ffffff,
+    inset -2px -2px 10px #a1a1a1,
+    inset 2px 2px 10px #ffffff;
+}
+.borrar1{
+	top: 10px;
+	left: 10px;
+	width: 10%;
+}
+.borrar2 {
+	margin-top: 20px;
+	margin-left: 25px;
+	width: 60%;
+	height: 60%;
+	padding-top: 16px;
+	text-align: center;
+	font-size: 37px;
+	border-radius: 74px !important;
+	background: #e0e0e0;
+	box-shadow:  -1px -1px 3px #a1a1a1,
+	2px 2px 6px #ffffff;
+	color: #00ffff;
+	text-shadow: 0 0 1px #00fff1, 0 0 3px #00fff1;
+
+}
+
+.borrar2:active {
+	text-shadow: 0 0 5px #000000, 0 0 20px #00fff1;
+	box-shadow: -1px -1px 3px #a1a1a1,
+    2px 2px 6px #ffffff,
+    inset -2px -2px 10px #a1a1a1,
+    inset 2px 2px 10px #ffffff;
+}
 
 
-	</div>
-	<!-- JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="index.js"></script>
-</body>
+.mensaje1 {
+	margin: 10px;
+	width: 70%;
+}
 
-</html>
+.mensaje2::placeholder {
+	font-size: 16px;
+	letter-spacing: 3px;
+	color: #555;
+}
+
+.mensaje2 {
+	-webkit-tap-highlight-color: transparent;
+	width: 100%;
+	min-height: 4rem;
+	padding: 1rem 1.5rem;
+	font-size: 1rem;
+	line-height: 2rem;
+	font-weight: 300;
+	background: #e0e0e0;
+	border: none;
+	border-radius: 34px;
+	outline: none;
+	box-shadow: -5px -5px 8px #a1a1a1,
+		5px 5px 8px #ffffff;
+	resize: vertical;
+	transition: ease .2s;
+	cursor: pointer;
+}
+
+.mensaje2:focus {
+	min-height: 8rem;
+	border-radius: 34px;
+	box-shadow: inset -5px -5px 8px #a1a1a1,
+		inset 5px 5px 8px #ffffff;
+}
+
+/* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+	color: transparent;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+	color: transparent;
+}
+
+/* Firefox 18- */
+:-moz-placeholder {
+	color: transparent;
+}
+
+.mensaje2:placeholder-shown {
+	background: none;
+}
+
+.enviar {
+	margin: 10px;
+	width: 10%;
+}
+
+.container {
+	align-content: center;
+}
+
+.search {
+	border-radius: 15px 0 0 15px !important;
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	border: 0 !important;
+	color: white !important;
+}
+
+.search:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+
+.type_msg {
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	border: 0 !important;
+	color: white !important;
+	height: 60px !important;
+	overflow-y: auto;
+}
+
+.type_msg:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+
+.attach_btn {
+	border-radius: 15px 0 0 15px !important;
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	border: 0 !important;
+	color: white !important;
+	cursor: pointer;
+}
+
+.send_btn {
+	border-radius: 0 15px 15px 0 !important;
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	border: 0 !important;
+	color: white !important;
+	cursor: pointer;
+}
+
+.search_btn {
+	border-radius: 0 15px 15px 0 !important;
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	border: 0 !important;
+	color: white !important;
+	cursor: pointer;
+}
+
+.contacts {
+	list-style: none;
+	padding: 0;
+}
+
+.contacts li {
+	width: 100% !important;
+	padding: 5px 10px;
+	margin-bottom: 15px !important;
+}
+
+.active {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.user_img {
+	height: 60px;
+	width: 60px;
+	border: 1.5px solid #f5f6fa;
+}
+
+.user_img_msg {
+	height: 40px;
+	width: 40px;
+	border: 1.5px solid #f5f6fa;
+}
+
+.img_cont {
+	position: relative;
+	height: 70px;
+	width: 70px;
+}
+
+.img_cont_msg {
+	height: 40px;
+	width: 40px;
+}
+
+.online_icon {
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background-color: #4cd137;
+	border-radius: 50%;
+	bottom: 10px;
+	right: 13px;
+	border: 1.5px solid white;
+}
+
+.offline {
+	background-color: #c23616 !important;
+}
+
+.user_info {
+	text-align: center;
+	padding-top: 13px;
+	width: 40%;
+	border-radius: 74px !important;
+	background: #e0e0e0;
+	box-shadow: -5px -5px 12px #9b9b9b,
+		5px 5px 12px #ffffff;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 15px;
+}
+
+.user_info span {
+	
+	font-size: 20px;
+	color: rgb(95, 95, 95);
+}
+
+.user_info p {
+	font-size: 10px;
+	color: rgb(95, 95, 95);
+}
+
+.video_cam {
+	margin-left: 50px;
+	margin-top: 5px;
+}
+
+.video_cam span {
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.msg_cotainer {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 10px;
+	border-radius: 25px;
+	background-color: #82ccdd;
+	padding: 10px;
+	position: relative;
+}
+
+.msg_cotainer_send {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 10px;
+	border-radius: 25px;
+	background-color: #78e08f;
+	padding: 10px;
+	position: relative;
+}
+
+.msg_time {
+	position: absolute;
+	left: 0;
+	bottom: -15px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 10px;
+}
+
+.msg_time_send {
+	position: absolute;
+	right: 0;
+	bottom: -15px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 10px;
+}
+
+.msg_head {
+	position: relative;
+}
+
+#action_menu_btn {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.action_menu {
+	z-index: 1;
+	position: absolute;
+	padding: 15px 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border-radius: 15px;
+	top: 30px;
+	right: 15px;
+	display: none;
+}
+
+.action_menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.action_menu ul li {
+	width: 100%;
+	padding: 10px 15px;
+	margin-bottom: 5px;
+}
+
+.action_menu ul li i {
+	padding-right: 10px;
+}
+
+.action_menu ul li:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+@media(max-width: 576px) {
+	.contacts_card {
+		margin-bottom: 15px !important;
+	}
+}
